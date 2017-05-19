@@ -11310,13 +11310,13 @@ var StickyHeader = function () {
     this.headerLinks = (0, _jquery2.default)(".primary-nav a");
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
-    zhis.refreshWaypoints();
+    this.refreshWaypoints();
   }
 
   _createClass(StickyHeader, [{
     key: 'refreshWaypoints',
     value: function refreshWaypoints() {
-      this.lazyImages.load(function () {
+      this.lazyImages.on('load', function () {
         Waypoint.refreshAll();
       });
     }
